@@ -14,4 +14,10 @@ class TrainController extends Controller
         $title = 'Treni';
         return view('trains', compact('trains', 'title'));
     }
+    public function detail($id)
+    {
+        $train = Train::find($id);
+        $title = 'Treno';
+        return view('train_detail', compact('train', 'title'));
+    }
 }
